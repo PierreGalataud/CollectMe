@@ -6,6 +6,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Article {
     private String id;
     private String nom;
+    private String description;
     private Timestamp date;
     private Category category;
     private FirebaseUser user;
@@ -48,5 +49,25 @@ public class Article {
 
     public void setDate(Timestamp date) {
         this.date = date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id='" + id + '\'' +
+                ", nom='" + nom + '\'' +
+                ", description='" + description + '\'' +
+                ", date=" + date +
+                ", category=" + category +
+                ", user=" + user +
+                '}';
     }
 }
