@@ -10,4 +10,5 @@
     <string name="connexion_reussite">Vous êtes connecté !</string>
     <string name="connexion_echec">Echec de connexion :(</string>
     <string name="btn_goBack">"Retour "</string>
+    <string name="no_article_text">Pas d\'article</string>
 </resources>

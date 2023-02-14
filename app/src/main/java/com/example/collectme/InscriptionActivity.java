@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.collectme.Entity.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -107,9 +108,11 @@ public class InscriptionActivity extends AppCompatActivity {
     }
     public void connexionCheck(FirebaseUser user){
         if(user != null){
-            Intent newIntent = new Intent(this, MainActivity.class);
+            Intent articleIntent = new Intent(this, ArticleActivity.class);
             Toast.makeText(this,R.string.connexion_reussite,Toast.LENGTH_LONG).show();
-            startActivity(newIntent);
+            String uid = user.getUid();
+            articleIntent.putExtra("user",user);
+            startActivity(articleIntent);
             finish();
         } else {
             Toast.makeText(this,R.string.connexion_echec,Toast.LENGTH_LONG).show();
