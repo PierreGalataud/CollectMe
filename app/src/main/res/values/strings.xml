@@ -7,4 +7,7 @@
     <string name="btn_connexion_text">Connexion</string>
     <string name="inscription_reussite">Inscription réussie !</string>
     <string name="inscription_echec">Echec lors de l\'inscription</string>
+    <string name="connexion_reussite">Vous êtes connecté !</string>
+    <string name="connexion_echec">Echec de connexion :(</string>
+    <string name="btn_goBack">"Retour "</string>
 </resources>

@@ -8,4 +8,7 @@
     <string name="btn_connexion_text">Connection</string>
     <string name="inscription_reussite">Sign up ok!</string>
     <string name="inscription_echec">Sign fup failed :(</string>
+    <string name="connexion_reussite">Sign in OK !</string>
+    <string name="connexion_echec">Sign in failed :(</string>
+    <string name="btn_goBack">Back</string>
 </resources>
