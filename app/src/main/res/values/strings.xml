@@ -11,4 +11,7 @@
     <string name="connexion_echec">Echec de connexion :(</string>
     <string name="btn_goBack">"Retour "</string>
     <string name="no_article_text">Pas d\'article</string>
+    <string name="lb_date_article">Date :</string>
+    <string name="lb_categorie_article">Catégorie :</string>
+    <string name="btn_detail_goto">Voir détail</string>
 </resources>
