@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 
 import com.example.collectme.ArticleActivity;
 import com.example.collectme.Entity.Article;
+import com.example.collectme.Entity.Category;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.Timestamp;
@@ -27,8 +28,8 @@ public class ArticleDAO {
         this.user = FirebaseAuth.getInstance().getCurrentUser();
     }
 
- public void getAllProduit(Context context){
-        db.collection("Article").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+ public void getAllArticle(Context context,ArrayList<Category> listCategorie){
+        db.collection("Article").whereEqualTo("id_user",user.getUid()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
@@ -41,7 +42,13 @@ public class ArticleDAO {
                         unArticle.setDescription(document.get("description").toString());
                         unArticle.setDate( Timestamp.class.cast(document.get("date")));
                         unArticle.setUser(user);
-                        // finir user et catgorie
+                        // finir catgorie
+                        // trouver la catégorie qui correspond à l'ID ? la remonter depuis une activity category ?
+                        for (Category categorie:listCategorie) {
+                            if(categorie.getId().equals(document.get("id_category").toString())){
+                                unArticle.setCategory(categorie);
+                            }
+                        }
 
                         listArticle.add(unArticle);
                     }

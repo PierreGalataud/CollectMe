@@ -12,4 +12,7 @@
     <string name="connexion_echec">Sign in failed :(</string>
     <string name="btn_goBack">Back</string>
     <string name="no_article_text">No article</string>
+    <string name="lb_date_article">Date :</string>
+    <string name="lb_categorie_article">Category :</string>
+    <string name="btn_detail_goto">Go To</string>
 </resources>
